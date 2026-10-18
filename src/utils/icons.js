@@ -1,0 +1,3 @@
+import { Megaphone, Search, BarChart3, Handshake, Headphones, TrendingUp, Mountain, Landmark, Building2, GraduationCap, Globe2, HeartHandshake, MapPinned, Briefcase, Store, Activity, ClipboardCheck, Target, Smartphone, MessageSquareHeart, LayoutDashboard, LineChart, Lightbulb } from 'lucide-react'
+export const icons = { Megaphone, Search, BarChart3, Handshake, Headphones, TrendingUp, Mountain, Landmark, Building2, GraduationCap, Globe2, HeartHandshake, MapPinned, Briefcase, Store, Activity, ClipboardCheck, Target, Smartphone, MessageSquareHeart, LayoutDashboard, LineChart, Lightbulb }
+export const getIcon = (n) => icons[n] || Target
