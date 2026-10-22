@@ -5,7 +5,6 @@ export const site = {
   whatsapp: '27837135761',
   website: 'http://stritgradgroup.co.za',
   address: '2071 Ntshunyana Street, Tladi, Soweto, Johannesburg, 1868',
-  registeredAddress: '1463 Melato Street, Soweto, Johannesburg, 1861',
   mapQuery: '2071 Ntshunyana Street, Tladi, Soweto, Johannesburg, 1868',
   linkedin: 'https://www.linkedin.com/posts/joseph-khoza-517154319_stritgrad-investinyouth-yaei-activity-7475283863901048832-iYeb',
   facebook: 'https://www.facebook.com/p/Stritgrad-Academy-100092981051739/',
@@ -88,14 +87,45 @@ export const differentiators = [
 ]
 
 export const industries = [
-  { name: 'Mining', icon: 'Mountain' }, { name: 'Financial Services', icon: 'Landmark' },
-  { name: 'Government', icon: 'Building2' }, { name: 'Education', icon: 'GraduationCap' },
-  { name: 'Development Agencies', icon: 'Globe2' }, { name: 'NGOs', icon: 'HeartHandshake' },
-  { name: 'Municipalities', icon: 'MapPinned' }, { name: 'Corporate CSI', icon: 'Briefcase' },
-  { name: 'Enterprise & Supplier Development', icon: 'Store' }
+  { slug: 'mining', name: 'Mining', icon: 'Mountain',
+    summary: 'Social and labour plan delivery, community enterprise development and local economic development around mining operations.',
+    help: ['Enterprise and supplier development for host communities', 'Community engagement and stakeholder mapping', 'Measurement and reporting for social and labour plan commitments'],
+    clients: 'Mining houses, mine community-development teams, SLP managers' },
+  { slug: 'financial-services', name: 'Financial Services', icon: 'Landmark',
+    summary: 'Financial inclusion, customer engagement and enterprise-support programmes that reach underserved entrepreneurs and consumers.',
+    help: ['Financial-literacy and entrepreneurship programmes', 'Lead generation, onboarding and verification through our contact centre', 'Impact reporting for CSI and inclusion initiatives'],
+    clients: 'Banks, insurers, fintechs, CSI and inclusion teams' },
+  { slug: 'government', name: 'Government', icon: 'Building2',
+    summary: 'Implementation support for national and provincial programmes that need field delivery, beneficiary management and compliance-ready reporting.',
+    help: ['Beneficiary registration, tracking and verification', 'Programme monitoring and evaluation', 'Stakeholder and community mobilisation'],
+    clients: 'National and provincial departments, public entities, agencies' },
+  { slug: 'education', name: 'Education', icon: 'GraduationCap',
+    summary: 'Career-readiness, entrepreneurship and skills programmes delivered with schools, colleges and universities.',
+    help: ['School and campus engagement programmes', 'Learner and graduate surveys', 'Skills, employability and entrepreneurship training'],
+    clients: 'Schools, TVET colleges, universities, education departments' },
+  { slug: 'development-agencies', name: 'Development Agencies', icon: 'Globe2',
+    summary: 'Research, implementation and evidence for donor-funded programmes that must show verified results.',
+    help: ['Baseline, midline and endline studies', 'Donor-ready monitoring and evaluation', 'Field implementation and community engagement'],
+    clients: 'Development finance institutions, donors, multilateral programmes' },
+  { slug: 'ngos', name: 'NGOs', icon: 'HeartHandshake',
+    summary: 'Practical delivery capacity and measurement tools for non-profits that need to prove their impact to funders.',
+    help: ['Programme design and implementation support', 'Beneficiary tracking and outcome measurement', 'Funder reporting and impact stories'],
+    clients: 'Non-profit organisations, foundations, community organisations' },
+  { slug: 'municipalities', name: 'Municipalities', icon: 'MapPinned',
+    summary: 'Local economic development, community participation and enterprise-support programmes at ward and municipal level.',
+    help: ['Community consultation and participation', 'SMME and township enterprise support', 'Service-delivery and satisfaction surveys'],
+    clients: 'Local and district municipalities, development agencies' },
+  { slug: 'corporate-csi', name: 'Corporate CSI', icon: 'Briefcase',
+    summary: 'Turning CSI budgets into programmes that deliver, and into evidence that shows what the investment achieved.',
+    help: ['CSI programme design and delivery', 'Employee and community volunteering', 'Social return on investment and impact dashboards'],
+    clients: 'Corporate CSI and sustainability teams' },
+  { slug: 'esd', name: 'Enterprise & Supplier Development', icon: 'Store',
+    summary: 'End-to-end ESD programmes that select, train, mentor and connect small businesses to markets, and report on B-BBEE outcomes.',
+    help: ['Enterprise selection, training and mentorship', 'Market access and supplier onboarding', 'ESD scorecard reporting and growth tracking'],
+    clients: 'Corporate ESD managers, procurement and transformation teams' }
 ]
 
-export const partners = ['YAEI', 'Capital Legacy', 'Flexi Group', 'Corporate Partners', 'Municipalities']
+export const partners = ['YAEI', 'Capital Legacy', 'Flexi Group']
 
 // SAMPLE testimonials — replace with real, approved client quotes before launch.
 export const testimonials = [

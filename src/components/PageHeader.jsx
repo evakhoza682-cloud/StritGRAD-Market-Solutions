@@ -1,6 +1,6 @@
 export default function PageHeader({ eyebrow, title, subtitle, children }) {
   return (
-    <header className="bg-navy text-white grid-bg">
+    <header className="bg-aurora text-white grid-bg">
       <div className="max-w-7xl mx-auto px-6 py-16 md:py-24">
         {eyebrow && <p className="eyebrow !text-gold-light">{eyebrow}</p>}
         <h1 className="text-4xl md:text-5xl leading-tight max-w-4xl">{title}</h1>

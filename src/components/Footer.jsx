@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Facebook, Instagram, Linkedin, Globe, MapPin, Phone, Mail } from 'lucide-react'
 import Newsletter from './Newsletter.jsx'
+import Logo from './Logo.jsx'
 import { site, services } from '../utils/data.js'
 
 const social = [
@@ -11,10 +12,10 @@ const social = [
 
 export default function Footer() {
   return (
-    <footer className="bg-navy text-white/80">
+    <footer className="bg-aurora text-white/80">
       <div className="max-w-7xl mx-auto px-6 py-14 grid md:grid-cols-2 lg:grid-cols-4 gap-10">
         <div>
-          <p className="text-white font-black text-xl">STRIT<span className="text-gold-light">GRAD</span></p>
+          <div className="mb-4"><Logo className="h-14" /></div>
           <p className="text-[10px] tracking-[0.25em] text-white/60 font-semibold mb-4">MARKET SOLUTIONS (PTY) LTD</p>
           <p className="text-sm mb-4">Strategic implementation, research, marketing, customer engagement and impact intelligence partner.</p>
           <div className="flex gap-3">
@@ -33,6 +34,7 @@ export default function Footer() {
           <h4 className="text-white font-bold mb-4">Company</h4>
           <ul className="space-y-2 text-sm">
             <li><Link to="/about" className="hover:text-gold-light">About</Link></li>
+            <li><Link to="/industries" className="hover:text-gold-light">Industries</Link></li>
             <li><Link to="/impact-intelligence" className="hover:text-gold-light">Impact Intelligence™</Link></li>
             <li><Link to="/flexi-hub" className="hover:text-gold-light">Flexi Hub Partnership</Link></li>
             <li><Link to="/projects" className="hover:text-gold-light">Projects</Link></li>

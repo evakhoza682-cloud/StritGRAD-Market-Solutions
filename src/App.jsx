@@ -16,6 +16,9 @@ import Careers from './pages/Careers.jsx'
 import Contact from './pages/Contact.jsx'
 import { Privacy, Popia, Terms } from './pages/Legal.jsx'
 import NotFound from './pages/NotFound.jsx'
+import Industries from './pages/Industries.jsx'
+import ScrollProgress from './components/ScrollProgress.jsx'
+import { LOGO_SRC } from './components/Logo.jsx'
 
 function ScrollAndTrack() {
   const { pathname } = useLocation()
@@ -26,8 +29,38 @@ function ScrollAndTrack() {
   return null
 }
 
+
+/** Adds a staggered fade-up reveal to cards/headings as they scroll into view. */
+function useReveal(pathname) {
+  useEffect(() => {
+    if (typeof IntersectionObserver === 'undefined') return
+    const els = Array.from(document.querySelectorAll('main .card, main .card-dark, main .glass, main .section-title, main .section-sub, main .eyebrow, main figure, main article, main .reveal-me'))
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target) } })
+    }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' })
+    els.forEach((el, i) => {
+      if (el.classList.contains('reveal')) return
+      el.classList.add('reveal'); el.style.setProperty('--d', `${(i % 6) * 80}ms`); io.observe(el)
+    })
+    return () => io.disconnect()
+  }, [pathname])
+}
+
 export default function App() {
   const { pathname } = useLocation()
+  useReveal(pathname)
+  // Scroll-reveal: fade/slide cards and headings in as they enter the screen
+  useEffect(() => {
+    if (typeof IntersectionObserver === 'undefined' || window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) return
+    const els = document.querySelectorAll('main .card, main .card-dark, main .glass, main h2.section-title, main .eyebrow, main figure')
+    const io = new IntersectionObserver((entries) => entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target) } }), { threshold: 0.1 })
+    els.forEach((el) => {
+      const idx = Array.prototype.indexOf.call(el.parentElement?.children || [], el)
+      el.style.transitionDelay = `${Math.max(idx, 0) % 6 * 70}ms`
+      el.classList.add('reveal'); io.observe(el)
+    })
+    return () => io.disconnect()
+  }, [pathname])
   useEffect(() => {
     const id = import.meta.env.VITE_GA_ID
     if (!id || window.gtag) return
@@ -39,15 +72,18 @@ export default function App() {
     window.gtag('js', new Date()); window.gtag('config', id, { send_page_view: false })
   }, [])
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col relative">
+      <img src={LOGO_SRC} alt="" aria-hidden="true" className="bg-watermark" onError={(e) => { e.currentTarget.style.display = 'none' }} />
       <ScrollAndTrack />
-      <Navbar />
-      <main key={pathname} className="flex-1 page-fade">
+      <ScrollProgress />
+      <div className="relative z-10"><Navbar /></div>
+      <main key={pathname} className="flex-1 page-fade relative z-10">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/services/:slug" element={<ServiceDetail />} />
+          <Route path="/industries" element={<Industries />} />
           <Route path="/impact-intelligence" element={<ImpactIntelligence />} />
           <Route path="/flexi-hub" element={<FlexiHub />} />
           <Route path="/projects" element={<Projects />} />
@@ -61,7 +97,7 @@ export default function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
-      <Footer />
+      <div className="relative z-10"><Footer /></div>
       <WhatsAppButton />
     </div>
   )

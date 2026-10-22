@@ -1,0 +1,2 @@
+Save the StritGRAD Market Solutions logo in this folder as: market-solutions-logo.png
+(Transparent background works best. It appears in the header, footer and as the faint page background.)

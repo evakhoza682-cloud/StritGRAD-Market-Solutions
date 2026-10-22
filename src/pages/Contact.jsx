@@ -18,7 +18,7 @@ export default function Contact() {
         <div className="space-y-6">
           <div className="card text-sm space-y-4">
             <h2 className="font-extrabold text-base">Contact details</h2>
-            <p className="flex gap-3"><MapPin size={18} className="text-gold-600 shrink-0" /><span>{site.address}<br /><span className="text-xs text-graytxt">Registered address: {site.registeredAddress}</span></span></p>
+            <p className="flex gap-3"><MapPin size={18} className="text-gold-600 shrink-0" /><span>{site.address}</span></p>
             <p className="flex gap-3"><Phone size={18} className="text-gold-600 shrink-0" /><a href={`tel:${site.phone.replace(/\s/g, '')}`}>{site.phone}</a></p>
             <p className="flex gap-3"><Mail size={18} className="text-gold-600 shrink-0" />{site.email}</p>
             <p className="flex gap-3"><Globe size={18} className="text-gold-600 shrink-0" /><a href={site.website} target="_blank" rel="noopener noreferrer">stritgradgroup.co.za</a></p>

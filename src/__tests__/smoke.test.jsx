@@ -11,7 +11,7 @@ window.IntersectionObserver = IO
 afterEach(cleanup)
 const go = (path) => render(<HelmetProvider><MemoryRouter initialEntries={[path]}><App /></MemoryRouter></HelmetProvider>)
 
-const paths = ['/', '/about', '/services', '/services/strategic-marketing', '/services/enterprise-development', '/impact-intelligence', '/flexi-hub', '/projects', '/insights', '/insights/measuring-what-matters', '/careers', '/contact', '/privacy-policy', '/popia', '/terms', '/nope']
+const paths = ['/', '/about', '/services', '/services/strategic-marketing', '/services/enterprise-development', '/industries', '/impact-intelligence', '/flexi-hub', '/projects', '/insights', '/insights/measuring-what-matters', '/careers', '/contact', '/privacy-policy', '/popia', '/terms', '/nope']
 
 describe('all pages render', () => {
   paths.forEach((p) => it(p, () => { go(p); expect(document.querySelector('main').textContent.length).toBeGreaterThan(20) }))

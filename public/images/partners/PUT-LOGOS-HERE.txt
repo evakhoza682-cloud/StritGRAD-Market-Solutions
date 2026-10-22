@@ -1,0 +1,3 @@
+Save partner logos here as .png files named exactly:
+yaei.png   capital-legacy.png   flexi-group.png
+(Transparent background is best; white backgrounds are blended away automatically.)
