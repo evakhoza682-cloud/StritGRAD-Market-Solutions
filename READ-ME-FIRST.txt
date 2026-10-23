@@ -1,6 +1,6 @@
-This update only contains the src folder (your own images in public are NOT touched).
-In cmd, inside C:\Users\Eva\Documents\StritGRAD-Market-Solutions:
-  xcopy "%USERPROFILE%\Desktop\market-solutions-update" . /E /Y
-  git add .
-  git commit -m logos
-  git push
+Contains src + 8 optimised photos (new names). Nothing of yours is overwritten.
+cd C:\Users\Eva\Documents\StritGRAD-Market-Solutions
+xcopy "%USERPROFILE%\Desktop\market-solutions-update" . /E /Y
+git add .
+git commit -m photos
+git push

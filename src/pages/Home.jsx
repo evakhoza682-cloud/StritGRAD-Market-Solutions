@@ -101,7 +101,7 @@ export default function Home() {
 
       {/* Hero */}
       <section className="relative bg-aurora text-white overflow-hidden">
-        <img src="/images/academy-training-day.jpg" alt="" className="absolute inset-0 w-full h-[120%] object-cover opacity-[.14] mix-blend-luminosity" style={{ translate: `0 ${py * 0.12}px` }} />
+        <img src="/images/hero-workshop.jpg" alt="" className="absolute inset-0 w-full h-[120%] object-cover opacity-[.14] mix-blend-luminosity" style={{ translate: `0 ${py * 0.12}px` }} />
         <NetworkBg />
         <div className="orb w-72 h-72 bg-orange-500 -top-10 right-10" style={{ translate: `0 ${py * 0.25}px` }} /><div className="orb w-80 h-80 bg-navy-400 bottom-0 -left-10" style={{ translate: `0 ${py * -0.15}px` }} />
         <div className="relative max-w-7xl mx-auto px-6 py-20 md:py-28 grid lg:grid-cols-2 gap-10 items-center">
@@ -144,7 +144,7 @@ export default function Home() {
           </div>
           <div className="perspective">
             <Tilt className="rounded-3xl overflow-hidden shadow-cardHover" max={5}>
-              <img src="/images/yaei-visit-group.jpg" alt="StritGRAD team and beneficiaries" className="w-full h-80 object-cover" loading="lazy" />
+              <img src="/images/community-group.jpg" alt="StritGRAD team and beneficiaries" className="w-full h-80 object-cover" loading="lazy" />
             </Tilt>
           </div>
         </div>
