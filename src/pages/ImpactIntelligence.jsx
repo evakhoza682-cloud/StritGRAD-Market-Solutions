@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import NetworkBg from '../components/NetworkBg.jsx'
 import SEO from '../components/SEO.jsx'
 import PageHeader from '../components/PageHeader.jsx'
 import CTASection from '../components/CTASection.jsx'
@@ -23,7 +24,7 @@ export default function ImpactIntelligence() {
             </div>) })}
         </div>
       </div></section>
-      <section className="bg-aurora text-white grid-bg"><div className="section max-w-4xl text-center">
+      <section className="bg-aurora text-white relative overflow-hidden"><NetworkBg /><div className="section relative max-w-4xl text-center">
         <h2 className="text-3xl md:text-4xl mb-4">Evidence-based decision making</h2>
         <p className="text-white/80 text-lg">Impact Intelligence™ turns programme data into insight: what is working, for whom, and where to adjust, so funders, government and corporates can invest with confidence and report with credibility.</p>
       </div></section>

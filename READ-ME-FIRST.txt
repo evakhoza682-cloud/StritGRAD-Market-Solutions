@@ -1,8 +1,4 @@
-1. Copy EVERYTHING in this folder into your StritGRAD-Market-Solutions folder (replace when asked).
-2. Open cmd in that folder and run:
-   git add .
-   git commit -m movement
-   git push
-3. Wait for Vercel to show Ready, then press Ctrl+F5 on the site.
-Logo: put your logo at public/images/logo/market-solutions-logo.png
-Partner logos: public/images/partners/yaei.png, capital-legacy.png, flexi-group.png
+Copy with cmd (inside C:\Users\Eva\Documents\StritGRAD-Market-Solutions):
+  xcopy "PATH-TO-THIS-FOLDER" . /E /Y
+Then:  git add .   git commit -m network   git push
+Logo: public\images\logo\market-solutions-logo.png (white background is removed automatically)

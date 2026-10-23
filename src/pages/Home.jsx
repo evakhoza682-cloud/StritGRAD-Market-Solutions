@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import NetworkBg from '../components/NetworkBg.jsx'
 import { useEffect, useState } from 'react'
 import { ArrowRight, CheckCircle2, Quote, TrendingUp, Users, MapPin, ShieldCheck, FileCheck2, Globe2, Settings2, Rocket, UserPlus, BarChart3, Building2, Landmark, HeartHandshake } from 'lucide-react'
 import SEO from '../components/SEO.jsx'
@@ -101,7 +102,7 @@ export default function Home() {
       {/* Hero */}
       <section className="relative bg-aurora text-white overflow-hidden">
         <img src="/images/academy-training-day.jpg" alt="" className="absolute inset-0 w-full h-[120%] object-cover opacity-[.14] mix-blend-luminosity" style={{ translate: `0 ${py * 0.12}px` }} />
-        <div className="absolute inset-0 grid-bg" />
+        <NetworkBg />
         <div className="orb w-72 h-72 bg-orange-500 -top-10 right-10" style={{ translate: `0 ${py * 0.25}px` }} /><div className="orb w-80 h-80 bg-navy-400 bottom-0 -left-10" style={{ translate: `0 ${py * -0.15}px` }} />
         <div className="relative max-w-7xl mx-auto px-6 py-20 md:py-28 grid lg:grid-cols-2 gap-10 items-center">
           <div>
@@ -188,7 +189,7 @@ export default function Home() {
 
       {/* Dashboard / evidence */}
       <section className="bg-aurora text-white relative overflow-hidden">
-        <div className="absolute inset-0 grid-bg" />
+        <NetworkBg />
         <div className="relative section grid lg:grid-cols-2 gap-12 items-center perspective">
           <div>
             <p className="eyebrow !text-orange-300">Evidence You Can Trust</p>
@@ -221,7 +222,7 @@ export default function Home() {
 
       {/* Why */}
       <section className="bg-aurora text-white relative overflow-hidden">
-        <div className="absolute inset-0 grid-bg" /><div className="orb w-72 h-72 bg-orange-500 top-0 right-0" />
+        <NetworkBg /><div className="orb w-72 h-72 bg-orange-500 top-0 right-0" />
         <div className="relative section grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <p className="eyebrow !text-orange-300">Why Choose StritGRAD</p>

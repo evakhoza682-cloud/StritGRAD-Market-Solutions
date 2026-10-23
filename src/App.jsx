@@ -18,7 +18,7 @@ import { Privacy, Popia, Terms } from './pages/Legal.jsx'
 import NotFound from './pages/NotFound.jsx'
 import Industries from './pages/Industries.jsx'
 import ScrollProgress from './components/ScrollProgress.jsx'
-import { LOGO_SRC } from './components/Logo.jsx'
+import { useLogo } from './components/Logo.jsx'
 
 function ScrollAndTrack() {
   const { pathname } = useLocation()
@@ -71,9 +71,10 @@ export default function App() {
     window.gtag = function () { window.dataLayer.push(arguments) }
     window.gtag('js', new Date()); window.gtag('config', id, { send_page_view: false })
   }, [])
+  const wm = useLogo()
   return (
     <div className="min-h-screen flex flex-col relative">
-      <img src={LOGO_SRC} alt="" aria-hidden="true" className="bg-watermark" onError={(e) => { e.currentTarget.style.display = 'none' }} />
+      {wm && <img src={wm} alt="" aria-hidden="true" className="bg-watermark" />}
       <ScrollAndTrack />
       <ScrollProgress />
       <div className="relative z-10"><Navbar /></div>

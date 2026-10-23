@@ -1,4 +1,5 @@
 import SEO from '../components/SEO.jsx'
+import NetworkBg from '../components/NetworkBg.jsx'
 import PageHeader from '../components/PageHeader.jsx'
 import CTASection from '../components/CTASection.jsx'
 import ProvinceMap from '../components/ProvinceMap.jsx'
@@ -28,7 +29,7 @@ export default function About() {
         </div>
       </div></section>
 
-      <section className="bg-aurora text-white grid-bg"><div className="section">
+      <section className="bg-aurora text-white relative overflow-hidden"><NetworkBg /><div className="section relative">
         <p className="eyebrow !text-gold-light">Our Leadership</p><h2 className="text-3xl md:text-4xl mb-8">Leadership</h2>
         <div className="grid md:grid-cols-3 gap-8">
           {leadership.map((l) => (
