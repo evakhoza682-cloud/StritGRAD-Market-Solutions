@@ -1,4 +1,6 @@
-Copy with cmd (inside C:\Users\Eva\Documents\StritGRAD-Market-Solutions):
-  xcopy "PATH-TO-THIS-FOLDER" . /E /Y
-Then:  git add .   git commit -m network   git push
-Logo: public\images\logo\market-solutions-logo.png (white background is removed automatically)
+This update only contains the src folder (your own images in public are NOT touched).
+In cmd, inside C:\Users\Eva\Documents\StritGRAD-Market-Solutions:
+  xcopy "%USERPROFILE%\Desktop\market-solutions-update" . /E /Y
+  git add .
+  git commit -m logos
+  git push

@@ -32,7 +32,7 @@ describe('behaviour', () => {
     await screen.findByText(/received your enquiry/)
   })
   it('contact form validates', async () => { go('/contact'); fireEvent.submit(document.querySelector('main form')); expect(await screen.findByText(/Please fill in/)).toBeTruthy() })
-  it('projects modal opens + filter', () => { go('/projects'); fireEvent.click(screen.getByText('School Engagement Programme')); expect(screen.getByText(/Request a Case Study/)).toBeTruthy() })
+  it('projects modal opens + filter', () => { go('/projects'); fireEvent.click(screen.getByText('Community Outreach & Data Collection')); expect(screen.getByText(/Request a Case Study/)).toBeTruthy() })
   it('insights filter', () => { go('/insights'); fireEvent.click(screen.getByRole('button', { name: 'Marketing' })); expect(screen.queryByText(/Measuring What Matters/)).toBeNull() })
   it('newsletter subscribes', async () => {
     const spy = vi.spyOn(api, 'post').mockResolvedValue({ data: {} }); go('/')
